@@ -42,8 +42,7 @@
       <artifactId>spring-test</artifactId>
       <scope>test</scope>
     </dependency>
-
-    <dependency>
+     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>6.8.13</version>
