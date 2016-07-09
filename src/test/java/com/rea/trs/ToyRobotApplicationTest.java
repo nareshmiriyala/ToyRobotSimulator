@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class ToyRobotApplicationTest extends AbstractTestNGSpringContextTests {
 
     @Test
-    void testMainApp() throws Exception {
+    public void testMainApp() throws Exception {
 
     }
 }

@@ -9,7 +9,7 @@ import static org.testng.Assert.assertNotNull;
 public class DimensionBuilderTest {
 
     @Test
-    void testBuildCreation() {
+   public void testBuildCreation() {
         Dimension dimension = DimensionBuilder.aDimension().withX(10).withY(10).build();
         assertNotNull(dimension);
         assertEquals(dimension.getX(), 10);
