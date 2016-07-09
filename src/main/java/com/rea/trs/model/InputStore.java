@@ -2,7 +2,9 @@ package com.rea.trs.model;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -12,13 +14,13 @@ import java.util.Set;
 public class InputStore {
     private String input;
 
-    private Set<String> commands = new HashSet<>();
+    private List<String> commands = new ArrayList<>();
 
-    public Set<String> getCommands() {
+    public List<String> getCommands() {
         return commands;
     }
 
-    public void setCommands(Set<String> commands) {
+    public void setCommands(List<String> commands) {
         this.commands = commands;
     }
 
