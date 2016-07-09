@@ -1,7 +1,9 @@
 package com.rea.trs.processor;
 
+import com.rea.trs.model.InputStore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,7 +13,8 @@ import org.springframework.stereotype.Component;
 public class ReportCommandProcessor extends AbstractProcessor {
     public static final String REPORT_COMMAND_PROCESSOR = "ReportCommandProcessor";
     private final Logger logger = LoggerFactory.getLogger(ReportCommandProcessor.class);
-
+    @Autowired
+    private InputStore store;
     @Override
     public void process() {
         logger.info("Report : {}", report());
@@ -20,8 +23,9 @@ public class ReportCommandProcessor extends AbstractProcessor {
     private String report() {
         if (toyRobot.getPosition() == null)
             return null;
-
-        return toyRobot.getPosition().toString();
+        String report = toyRobot.getPosition().toString();
+        store.setReportValue(report);
+        return report;
     }
 
 }

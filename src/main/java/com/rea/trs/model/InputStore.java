@@ -14,6 +14,8 @@ import java.util.Set;
 public class InputStore {
     private String input;
 
+    private String reportValue;
+
     private List<String> commands = new ArrayList<>();
 
     public List<String> getCommands() {
@@ -30,5 +32,13 @@ public class InputStore {
 
     public void setInput(String input) {
         this.input = input;
+    }
+
+    public String getReportValue() {
+        return reportValue;
+    }
+
+    public void setReportValue(String reportValue) {
+        this.reportValue = reportValue;
     }
 }
