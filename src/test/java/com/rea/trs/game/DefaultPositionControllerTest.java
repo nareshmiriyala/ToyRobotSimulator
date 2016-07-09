@@ -1,5 +1,6 @@
 package com.rea.trs.game;
 
+import com.rea.trs.ToyRobotApplication;
 import com.rea.trs.builders.DimensionBuilder;
 import com.rea.trs.builders.PositionBuilder;
 import com.rea.trs.exceptions.ToySimulatorException;
@@ -15,7 +16,7 @@ import org.testng.annotations.Test;
 import static com.rea.trs.model.Direction.*;
 import static org.testng.Assert.assertEquals;
 
-@SpringApplicationConfiguration(classes = {DefaultPositionController.class, SquareBoard.class})
+@SpringApplicationConfiguration(ToyRobotApplication.class)
 public class DefaultPositionControllerTest extends AbstractTestNGSpringContextTests {
     private static final String NEXT_POSITIONS = "nextPositions";
     @Autowired

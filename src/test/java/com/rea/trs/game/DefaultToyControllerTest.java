@@ -1,5 +1,6 @@
 package com.rea.trs.game;
 
+import com.rea.trs.ToyRobotApplication;
 import com.rea.trs.builders.DimensionBuilder;
 import com.rea.trs.builders.PositionBuilder;
 import com.rea.trs.exceptions.ToySimulatorException;
@@ -13,7 +14,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-@SpringApplicationConfiguration(classes = {DefaultToyController.class, DefaultDirectionController.class, DefaultPositionController.class, SquareBoard.class})
+@SpringApplicationConfiguration(ToyRobotApplication.class)
 public class DefaultToyControllerTest extends AbstractTestNGSpringContextTests {
     @Autowired
     private DefaultToyController toyController;
