@@ -1,4 +1,4 @@
-package com.rea;
+package com.rea.trs;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
