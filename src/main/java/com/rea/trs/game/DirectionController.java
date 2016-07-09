@@ -3,7 +3,7 @@ package com.rea.trs.game;
 import com.rea.trs.model.Direction;
 
 /**
- * A controller to move left and right direction
+ * A controller to movePosition left and right direction
  */
 public interface DirectionController {
 

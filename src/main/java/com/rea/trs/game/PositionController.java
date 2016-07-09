@@ -4,8 +4,8 @@ import com.rea.trs.exceptions.ToySimulatorException;
 import com.rea.trs.model.Position;
 
 /**
- * Controller to move the toy position
+ * Controller to movePosition the toy position
  */
 public interface PositionController {
-    public void nextPosition(Position position) throws ToySimulatorException;
+    void nextPosition(Position position) throws ToySimulatorException;
 }

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Controller to move left and right direction from current direction.
+ * Controller to movePosition left and right direction from current direction.
  */
 @Component
 public class DefaultDirectionController implements DirectionController {
