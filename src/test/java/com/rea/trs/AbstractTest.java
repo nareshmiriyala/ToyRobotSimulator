@@ -1,6 +1,5 @@
-package com.rea.trs.test;
+package com.rea.trs;
 
-import com.rea.trs.ToyRobotApplication;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 

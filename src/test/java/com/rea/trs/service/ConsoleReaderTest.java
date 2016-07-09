@@ -1,8 +1,8 @@
 package com.rea.trs.service;
 
+import com.rea.trs.AbstractTest;
 import com.rea.trs.exceptions.InvalidCommandException;
 import com.rea.trs.model.Command;
-import com.rea.trs.test.AbstractTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
