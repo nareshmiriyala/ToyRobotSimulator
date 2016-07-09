@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class SquareBoard implements Board {
+
     private Dimension dimension;
     public Dimension getDimension() {
         return dimension;

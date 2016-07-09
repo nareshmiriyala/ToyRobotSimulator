@@ -3,6 +3,7 @@ package com.rea.trs.model;
 /**
  * Class to store the dimension of the board.
  */
+
 public class Dimension {
     private int x;
     private int y;
