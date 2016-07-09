@@ -6,6 +6,7 @@ import com.rea.trs.builders.PositionBuilder;
 import com.rea.trs.exceptions.ToySimulatorException;
 import com.rea.trs.model.Direction;
 import com.rea.trs.model.Position;
+import com.rea.trs.test.AbstractTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
@@ -16,8 +17,7 @@ import org.testng.annotations.Test;
 import static com.rea.trs.model.Direction.*;
 import static org.testng.Assert.assertEquals;
 
-@SpringApplicationConfiguration(ToyRobotApplication.class)
-public class DefaultPositionControllerTest extends AbstractTestNGSpringContextTests {
+public class DefaultPositionControllerTest extends AbstractTest {
     private static final String NEXT_POSITIONS = "nextPositions";
     @Autowired
     private PositionController positionController;

@@ -2,6 +2,7 @@ package com.rea.trs.game;
 
 import com.rea.trs.ToyRobotApplication;
 import com.rea.trs.model.Direction;
+import com.rea.trs.test.AbstractTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
@@ -12,8 +13,7 @@ import static com.googlecode.totallylazy.matchers.Matchers.is;
 import static com.rea.trs.model.Direction.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-@SpringApplicationConfiguration(ToyRobotApplication.class)
-public class DefaultDirectionControllerTest extends AbstractTestNGSpringContextTests {
+public class DefaultDirectionControllerTest extends AbstractTest {
     private static final String LEFT_DIRECTIONS = "leftDirections";
     private static final String RIGHT_DIRECTIONS = "rightDirections";
     @Autowired
