@@ -1,6 +1,5 @@
 package com.rea.trs.game;
 
-import com.rea.trs.ToyRobotApplication;
 import com.rea.trs.builders.DimensionBuilder;
 import com.rea.trs.builders.PositionBuilder;
 import com.rea.trs.exceptions.ToySimulatorException;
@@ -8,8 +7,6 @@ import com.rea.trs.model.Direction;
 import com.rea.trs.model.Position;
 import com.rea.trs.test.AbstractTest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
