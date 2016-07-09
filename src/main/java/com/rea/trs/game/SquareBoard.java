@@ -18,6 +18,7 @@ public class SquareBoard implements Board {
         this.dimension = dimension;
     }
 
+    @Override
     public boolean isValidPosition(Position position) {
         return isValid(position);
     }
