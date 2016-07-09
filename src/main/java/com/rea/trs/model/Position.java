@@ -45,4 +45,11 @@ public class Position {
         this.x = this.x + x;
         this.y = this.y + y;
     }
+
+    @Override
+    public String toString() {
+        return "" + x +
+                "," + y +
+                "" + direction;
+    }
 }
