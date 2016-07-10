@@ -1,5 +1,6 @@
 package com.rea.trs.processor;
 
+import com.rea.trs.exceptions.InvalidCommandException;
 import com.rea.trs.exceptions.ToySimulatorException;
 import com.rea.trs.model.Direction;
 import com.rea.trs.model.InputStore;
@@ -21,12 +22,12 @@ public class PlaceCommandProcessor extends AbstractProcessor {
     private Direction commandDirection = null;
 
     @Override
-    public void process() throws ToySimulatorException {
+    public void process() throws InvalidCommandException, ToySimulatorException {
         storeInputValues();
         placeRobot(new Position(x, y, commandDirection));
     }
 
-    private void storeInputValues() throws ToySimulatorException {
+    private void storeInputValues() throws InvalidCommandException {
         String input = inputStore.getInput();
         String[] params = input.split(",");
 
@@ -35,7 +36,7 @@ public class PlaceCommandProcessor extends AbstractProcessor {
             y = Integer.parseInt(params[1]);
             commandDirection = Direction.valueOf(params[2]);
         } catch (Exception e) {
-            throw new ToySimulatorException("Invalid command");
+            throw new InvalidCommandException("Invalid command");
         }
     }
 
