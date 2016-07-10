@@ -1,10 +1,13 @@
 package com.rea.trs.processor;
 
 import com.rea.trs.model.InputStore;
+import com.rea.trs.model.Position;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import static java.util.Objects.isNull;
 
 /**
  * Processor to Print the report.
@@ -21,9 +24,10 @@ public class ReportCommandProcessor extends AbstractProcessor {
     }
 
     private String report() {
-        if (toyRobot.getPosition() == null)
+        Position toyRobotPosition = toyRobot.getPosition();
+        if (isNull(toyRobotPosition))
             return null;
-        String report = toyRobot.getPosition().toString();
+        String report = toyRobotPosition.toString();
         store.setReportValue(report);
         return report;
     }
