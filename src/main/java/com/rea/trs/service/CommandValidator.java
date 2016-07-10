@@ -28,6 +28,10 @@ public class CommandValidator implements Validator {
             throw new InvalidCommandException(format("Input %s is invalid", cmd));
         }
         Optional<String> place = store.getCommands().stream().filter(s -> s.startsWith(PLACE)).findFirst();
+        if(!cmd.startsWith(PLACE) && !place.isPresent()){
+            logger.error("Please enter PLACE command first");
+            throw new InvalidCommandException("Please enter PLACE command");
+        }
         if (place.isPresent() && cmd.startsWith(PLACE)) {
             logger.info(format("Command %s already exists ignoring command", cmd));
             return;
